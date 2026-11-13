@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regie — BSIT Web Designer & Front-End Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <div class="flex items-center space-x-3">
+                    <span class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">
+                        RG
+                    </span>
+
+                    <a href="#hero" class="text-lg font-bold tracking-tight text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded">
+                        Regie
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded px-1">
+                        About
+                    </a>
+
+                    <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded px-1">
+                        Projects
+                    </a>
+
+                    <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded px-1">
+                        Skills & Experience
+                    </a>
+
+                    <a href="#contact" class="text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg transition-all shadow-md shadow-indigo-600/30 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                        Get in Touch
+                    </a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" aria-label="Toggle navigation menu"
+                        class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-white font-medium">About</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-white font-medium">Projects</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-white font-medium">Skills & Experience</a>
+            <a href="#contact" class="block py-2 text-indigo-400 hover:text-indigo-300 font-medium">Get in Touch</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.15),rgba(255,255,255,0))]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+
+                    <div class="inline-flex items-center space-x-2 bg-indigo-950/80 border border-indigo-800/60 px-3 py-1.5 rounded-full text-indigo-300 text-xs sm:text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Available for Freelance & Full-time Roles</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Crafting digital products with
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">
+                            purpose & precision
+                        </span>.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0">
+                        Hi, I’m Regie. I'm a Web Designer and Developer passionate about building user-centric web applications that solve complex problems with elegant simplicity.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#projects"
+                            class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-lg shadow-indigo-600/30 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                            Explore Projects
+                            <i class="fa-solid fa-arrow-down ml-2 text-sm"></i>
+                        </a>
+
+                        <a href="#contact"
+                            class="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-6 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-slate-400">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border-2 border-indigo-500/30 shadow-2xl shadow-indigo-500/10 group">
+
+
+
+
+
+                        <img 
+                        src="d:\code\1111.jpg" 
+                        class="w-full h-full object-cover" 
+                        alt="Background"
+                      />
+                      
+                    
+                      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent opacity-60"></div>
+                    </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">
+                    Personal Identity & Philosophy
+                </h2>
+
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">
+                    Merging Design Aesthetics with Robust Engineering
+                </h3>
+
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+                    With over 6 years of experience bridging the gap between design and code, I believe that great products emerge at the intersection of empathy, aesthetic clarity, and technical feasibility. My workflow focuses on rigorous user research, wireframing, rapid prototyping, and clean, scalable code implementation.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">
+                        Featured Work
+                    </h2>
+
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">
+                        Case Studies & Key Projects
+                    </h3>
+                </div>
+
+                <p class="text-slate-400 mt-2 md:mt-0 max-w-sm text-sm">
+                    Detailed overview explaining my role, tools utilized, design process, and measurable outcomes.
+                </p>
+            </div>
+
+            <div class="space-y-16">
+
+            
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8">
+
+
+                    <div class="lg:col-span-6 overflow-hidden rounded-xl border border-slate-800">
+                        <img
+                            src="d:\code\3333.jpg"
+                            alt="Screenshot of Fintech Analytics Dashboard project"
+                            class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x500/1e293b/ffffff?text=Dashboard+Image';"
+                        >
+                    </div>
+                
+
+                    <div class="lg:col-span-6 space-y-6">
+                
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-indigo-950 text-indigo-400 border border-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                Fintech SaaS
+                            </span>
+                            <span class="text-slate-500 text-xs font-medium">
+                                Duration: 4 Months
+                            </span>
+                        </div>
+                
+                        <h4 class="text-2xl font-bold text-white">
+                            PulsePay Analytics Platform
+                        </h4>
+                
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            A comprehensive financial dashboard designed for enterprise merchants to track transaction flows, invoice statuses, and predictive cash flow metrics in real-time.
+                        </p>
+                
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs border-t border-slate-800 pt-4">
+                            <div>
+                                <span class="font-bold text-indigo-400 block mb-1">
+                                    My Role:
+                                </span>
+                                <span class="text-slate-300">
+                                    Lead Product Designer & Front-End Architect
+                                </span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-indigo-400 block mb-1">
+                                    Tools & Stack:
+                                </span>
+                                <span class="text-slate-300">
+                                    Figma, Tailwind CSS, React, Chart.js
+                                </span>
+                            </div>
+                        </div>
+                
+                        <div class="space-y-2 text-xs">
+                            <span class="font-bold text-slate-200 block">
+                                Process & Outcome:
+                            </span>
+                            <p class="text-slate-400">
+                                Conducted 12 user interviews with finance managers to identify bottlenecks in manual reporting. Created low-fi wireframes, tested interactive prototypes, and built responsive React components. Resulted in a 40% reduction in time spent reconciling daily invoices and increased user engagement metrics by 28%.
+                            </p>
+                        </div>
+                
+                        <div class="pt-2">
+                            <a href="#contact"
+                               class="inline-flex items-center text-sm font-semibold text-indigo-400 hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded">
+                                Request Full Case Study
+                                <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                
+                    </div>
+                
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8">
+
+                    <div class="lg:col-span-6 overflow-hidden rounded-xl border border-slate-800">
+                        <img
+                            src="d:\code\2222.jpg"
+                            alt="Mockup of HealthTech Mobile Application"
+                            class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/800x500/1e293b/ffffff?text=HealthApp+Image'"
+                        >
+                    </div>
+
+                    <div class="lg:col-span-6 space-y-6">
+
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-violet-950 text-violet-400 border border-violet-800 text-xs font-semibold px-3 py-1 rounded-full">
+                                Healthcare Mobile App
+                            </span>
+
+                            <span class="text-slate-500 text-xs font-medium">
+                                Duration: 3 Months
+                            </span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white">
+                            VitalCare Telehealth Portal
+                        </h4>
+
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            An intuitive patient-facing mobile application designed to streamline virtual consultations, prescription renewals, and personal biometric tracking.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs border-t border-slate-800 pt-4">
+
+                            <div>
+                                <span class="font-bold text-violet-400 block mb-1">
+                                    My Role:
+                                </span>
+                                <span class="text-slate-300">
+                                    UX Researcher & UI Designer
+                                </span>
+                            </div>
+
+                            <div>
+                                <span class="font-bold text-violet-400 block mb-1">
+                                    Tools & Stack:
+                                </span>
+                                <span class="text-slate-300">
+                                    Figma, Principle, iOS Guidelines, Accessibility Audits
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="space-y-2 text-xs">
+                            <span class="font-bold text-slate-200 block">
+                                Process & Outcome:
+                            </span>
+
+                            <p class="text-slate-400">
+                                Focused heavily on accessibility (WCAG AAA compliance) and simplified navigation for elderly demographics. Performed card sorting and iterative usability testing sessions. Successfully reduced appointment booking drop-off rates by 35% within the first month post-launch.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <a href="#contact"
+                                class="inline-flex items-center text-sm font-semibold text-violet-400 hover:text-violet-300 focus:outline-none focus:ring-2 focus:ring-violet-400 rounded">
+                                Request Full Case Study
+                                <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-slate-900/50 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">
+                    Expertise & Background
+                </h2>
+
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">
+                    Skills, Experience, & Education
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg space-y-6">
+
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white">
+                            Technical Skills
+                        </h4>
+                        
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 text-sm">
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">HTML5</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">CSS3</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">Tailwind CSS</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">JavaScript</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">Responsive Design</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">UI/UX Design</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">Figma</span>
+                        <span class="bg-slate-800 px-3 py-2 rounded-lg text-slate-300">Git/GitHub</span>
+                    </div>
+                    
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg space-y-6">
+
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white">
+                            Experience
+                        </h4>
+                    </div>
+
+                    <div class="space-y-6 border-l border-slate-800 pl-4 ml-2">
+
+                        <div class="relative">
+                            <span class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-indigo-500 border-2 border-slate-900"></span>
+
+                            <span class="text-xs text-indigo-400 font-semibold">
+                                2022 — Present
+                            </span>
+
+                            <h5 class="text-sm font-bold text-white mt-0.5">
+                                Senior UX/UI Designer
+                            </h5>
+
+                            <p class="text-xs text-slate-400 mt-1">
+                                Nexus Digital Agency • Leading cross-functional teams on high-scale web applications and design systems.
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-slate-700 border-2 border-slate-900"></span>
+
+                            <span class="text-xs text-slate-400 font-semibold">
+                                2019 — 2022
+                            </span>
+
+                            <h5 class="text-sm font-bold text-white mt-0.5">
+                                Front-End Developer & UI Designer
+                            </h5>
+
+                            <p class="text-xs text-slate-400 mt-1">
+                                Vanguard Tech • Developed responsive web interfaces, optimized user conversion funnels, and maintained component libraries.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg space-y-6">
+
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white">
+                            Education
+                        </h4>
+                    </div>
+
+                    <div class="space-y-6 border-l border-slate-800 pl-4 ml-2">
+
+                        <div class="relative">
+                            <span class="absolute -left-[21px] top-1.5 w-3 h-3 rounded-full bg-emerald-500 border-2 border-slate-900"></span>
+
+                            <span class="text-xs text-emerald-400 font-semibold">
+                                2015 — 2019
+                            </span>
+
+                            <h5 class="text-sm font-bold text-white mt-0.5">
+                                Bachelor of Science in Information Technology
+                            </h5>
+                            
+                            <p class="text-xs text-slate-400 mt-1">
+                                [Your School/University] • [Year — Present]
+                            </p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+                <div class="lg:col-span-5 space-y-6">
+
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400">
+                        Get in Touch
+                    </h2>
+
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">
+                        Let's build something exceptional together.
+                    </h3>
+
+                    <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                        Whether you have a project in mind, want to discuss a potential collaboration, or simply want to say hello, my inbox is always open.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+
+                        <div class="flex items-center space-x-4 text-slate-300">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-indigo-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <span class="block text-xs text-slate-500 font-medium">
+                                    Email Address
+                                </span>
+
+                                <a href="mailto:regie@example.com"
+                                    class="text-sm font-semibold hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded">
+                                    dadayanregie49@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 text-slate-300">
+
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-indigo-400">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <span class="block text-xs text-slate-500 font-medium">
+                                    Location
+                                </span>
+
+                                <span class="text-sm font-semibold">
+                                    Nagawa, Ampucao, Itogon, Benguet
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl">
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6" novalidate>
+
+                        <div>
+                            <label for="name"
+    class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+    Your Name
+    <span class="text-indigo-400">*</span>
+</label>
+
+                                <span class="text-indigo-400">*</span>
+                            </label>
+
+                            <input type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Jane Doe"
+                                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                                Your Email
+                                <span class="text-indigo-400">*</span>
+                            </label>
+
+                            <input type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="jane@example.com"
+                                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                                Your Message
+                                <span class="text-indigo-400">*</span>
+                            </label>
+
+                            <textarea id="message"
+                                name="message"
+                                rows="4"
+                                required
+                                placeholder="Tell me about your project or inquiry..."
+                                class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg shadow-indigo-600/30 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                            Send Message
+                        </button>
+
+                        <div id="form-success-msg"
+                            class="hidden p-4 rounded-xl bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-sm text-center">
+                            Thank you! Your message has been successfully sent. I will get back to you soon.
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0 text-center sm:text-left">
+
+            <p class="text-xs text-slate-500">
+                &copy; 2026 Regie. Built with HTML5 & Tailwind CSS. All rights reserved.
+            </p>
+
+            <div class="flex space-x-6 text-slate-400 text-sm">
+
+                <a href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Profile"
+                    class="hover:text-white">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile"
+                    class="hover:text-white">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter Profile"
+                    class="hover:text-white">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+
+            if (!name || !email || !message) {
+                return;
+            }
+
+            const successBox = document.getElementById('form-success-msg');
+
+            successBox.classList.remove('hidden');
+            form.reset();
+
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+
+</body>
+</html>
+    </script>
+</body>
+</html>
